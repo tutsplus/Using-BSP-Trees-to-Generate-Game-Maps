@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gamedevtuts+: Demo</title>
+<style>
+	body {background: #f2f2f2;  text-align: center; padding: 20px}
+</style>
+</head>
+<body>
+<object id="theSWF" width="550" height="440" data="preview.swf" type="application/x-shockwave-flash">
+	<param name="src" value="preview.swf" />
+</object>
+<script language="javascript">
+//http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
+var vars = [], hash;
+var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+for(var i = 0; i < hashes.length; i++)
+{
+	hash = hashes[i].split('=');
+	vars.push(hash[0]);
+	vars[hash[0]] = hash[1];
+}
+
+var swfObj = document.getElementById("theSWF");
+if (vars["height"]) swfObj.height = vars["height"];
+if (vars["width"]) swfObj.width = vars["width"];
+if (vars["swfName"]) { 
+	document.getElementsByName("src").value = vars["swfName"];
+	swfObj.data = vars["swfName"];
+}
+</script>
+</body>
+</html>
