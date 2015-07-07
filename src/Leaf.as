@@ -145,7 +145,7 @@ package
 			{
 				if (h < 0)
 				{
-					if (FlxG.random() * 0.5)
+					if (FlxG.random() < 0.5)
 					{
 						halls.push(new Rectangle(point2.x, point1.y, Math.abs(w), 1));
 						halls.push(new Rectangle(point2.x, point2.y, 1, Math.abs(h)));
@@ -159,7 +159,7 @@ package
 				else if (h > 0)
 				{
 					
-					if (FlxG.random() * 0.5)
+					if (FlxG.random() < 0.5)
 					{
 						halls.push(new Rectangle(point2.x, point1.y, Math.abs(w), 1));
 						halls.push(new Rectangle(point2.x, point1.y, 1, Math.abs(h)));
@@ -179,7 +179,7 @@ package
 			{
 				if (h < 0)
 				{
-					if (FlxG.random() * 0.5)
+					if (FlxG.random() < 0.5)
 					{
 						halls.push(new Rectangle(point1.x, point2.y, Math.abs(w), 1));
 						halls.push(new Rectangle(point1.x, point2.y, 1, Math.abs(h)));
@@ -192,7 +192,7 @@ package
 				}
 				else if (h > 0)
 				{
-					if (FlxG.random() * 0.5)
+					if (FlxG.random() < 0.5)
 					{
 						halls.push(new Rectangle(point1.x, point1.y, Math.abs(w), 1));
 						halls.push(new Rectangle(point2.x, point1.y, 1, Math.abs(h)));
