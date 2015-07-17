@@ -37,9 +37,9 @@ package
 			
 			var splitH:Boolean = FlxG.random() > 0.5;
 			
-			if (width > height && height / width >= 0.05)
+			if (width > height && width / height >= 1.25)
 				splitH = false;
-			else if (height > width && width / height >= 0.05)
+			else if (height > width && height / width >= 1.25)
 				splitH = true;
 			
 			var max:int = (splitH ? height : width) - Registry.MIN_LEAF_SIZE; // determine the maximum height or width
